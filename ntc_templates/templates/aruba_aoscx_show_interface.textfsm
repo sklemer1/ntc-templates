@@ -19,7 +19,7 @@ Value ERROR_CONTROL (\S+)
 Value VLAN_MODE (\S+)
 Value VLAN_ACCESS (\S+)
 Value VLAN_NATIVE (\S+)
-Value List VLAN_TRUNK ([^,]+)
+Value VLAN_TRUNK (\S+)
 Value List AGGREGATED_INTERFACES (\S+)
 Value RX_TOTAL_PACKETS (\d+)
 Value RX_TOTAL_BYTES (\d+)
@@ -60,13 +60,7 @@ Start
   ^\s*VLAN Mode\s*:\s*${VLAN_MODE}
   ^\s*Access VLAN\s*:\s*${VLAN_ACCESS}
   ^\s*Native VLAN\s*:\s*${VLAN_NATIVE}
-  ^\s*Allowed VLAN List\s*:\s+${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){1}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){2}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){3}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){4}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){5}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:
+  ^\s*Allowed VLAN List\s*:\s+${VLAN_TRUNK}$$
   ^\s*Link state
   ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES}\s* -> Continue
   ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES}\s* -> Continue
