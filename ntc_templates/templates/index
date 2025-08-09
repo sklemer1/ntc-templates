@@ -678,6 +678,7 @@ hp_procurve_show_ip_route.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip ro[[ute]
 hp_procurve_show_version.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ve[[rsion]]
 hp_procurve_show_system.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_trunks.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] tr[[unks]]
+hp_procurve_show_vlans_ports_all_detail.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] vl[[ans]] port[s] all detail
 hp_procurve_show_vlans.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip

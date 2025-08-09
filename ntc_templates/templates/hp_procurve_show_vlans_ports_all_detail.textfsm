@@ -1,0 +1,11 @@
+Value Required PORT (\S+)
+Value List VLAN_TRUNK (\d+)
+Value List VLAN_TRUNK_NAME ([-\w\s]+\w+)
+Value VLAN_ACCESS (\d+)
+Value VLAN_NAME ([-\w\s]+\w+)
+
+Start
+  ^\s*Status and Counters - VLAN Information - for ports \d+\s*$$ -> Continue.Record
+  ^\s*Status and Counters - VLAN Information - for ports ${PORT}\s*$$
+  ^\s*${VLAN_TRUNK}\s+${VLAN_TRUNK_NAME}\s+\|.*Tagged\s*$$
+  ^\s*${VLAN_ACCESS}\s+${VLAN_NAME}\s+\|.*Untagged\s*$$
